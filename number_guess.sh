@@ -24,7 +24,7 @@ GAME(){
       GAME
     else
       INSERT_GAME=$($PSQL "INSERT INTO games(user_id,number_of_guesses,secret_number) VALUES($USERNAME,$TRIES,$NUMBER);")
-      echo "You are correct!"
+      echo "You guessed it in $TRIES tries. The secret number was $NUMBER. Nice job!"
     fi
   fi
 }
